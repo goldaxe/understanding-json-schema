@@ -1,0 +1,31 @@
+name pdftex
+category TLCore
+revision 32132
+shortdesc A TeX extension for direct creation of PDF.
+longdesc An extension of TeX which can be configured to directly
+longdesc generate PDF documents instead of DVI. All current free TeX
+longdesc distributionsm including TeX live, MacTeX and MiKTeX include
+longdesc pdfTeX (Plain TeX) and pdfLaTeX (LaTeX). ConTeXt was designed
+longdesc around use of pdfTeX (though it is now migrating towards
+longdesc LuaTeX).
+depend kpathsea
+depend pdftex.ARCH
+execute AddFormat name=pdftex  engine=pdftex patterns=language.def                     options="-translate-file=cp227.tcx *pdfetex.ini"
+execute AddFormat name=etex    engine=pdftex patterns=language.def                     options="-translate-file=cp227.tcx *etex.ini"
+execute AddFormat name=pdfetex engine=pdftex patterns=language.def                     options="-translate-file=cp227.tcx *pdfetex.ini"
+containersize 121908
+containermd5 e7a36d5afdd05a98c1b3373f2cef50e8
+doccontainersize 2766872
+doccontainermd5 b893f1e8d883912f4d7e0ef0e307048b
+runfiles size=958
+ texmf-dist/fonts/map/pdftex/updmap/pdftex.map
+ texmf-dist/fonts/map/pdftex/updmap/pdftex_dl14.map
+ texmf-dist/fonts/map/pdftex/updmap/pdftex_ndl14.map
+ texmf-dist/scripts/simpdftex/simpdftex
+ texmf-dist/tex/generic/config/pdftex-dvi.tex
+ texmf-dist/tex/generic/config/pdftexconfig.tex
+ texmf-dist/tex/generic/pdftex/glyphtounicode.tex
+catalogue-ctan /systems/pdftex
+catalogue-date 2011-11-09 15:33:34 +0100
+catalogue-license gpl
+catalogue-version 1.40.11
